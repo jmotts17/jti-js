@@ -1,4 +1,4 @@
-/* Strings */
+/* --- Strings --- */
 
 // const name = 'Joshua';
 // const middle = "Anthony";
@@ -19,21 +19,67 @@
 // document.body.innerHTML = html;
 
 
-/* Numbers */
 
-const age = 100.5;
-const name = 'Josh';
+/* --- Numbers --- */
 
-const a = 10;
-const b = 20;
+// const age = 100.5;
+// const name = 'Josh';
 
-const smarties = 20;
-const kids = 3;
-const eachKidGets = smarties / kids;
-console.log(`Each kid gets ${Math.floor(eachKidGets)}.`);
-console.log(`Dad gets ${smarties % kids}.`);
+// const a = 10;
+// const b = 20;
 
-const price = 1034;
+// const smarties = 20;
+// const kids = 3;
+// const eachKidGets = smarties / kids;
+// console.log(`Each kid gets ${Math.floor(eachKidGets)}.`);
+// console.log(`Dad gets ${smarties % kids}.`);
+
+// const price = 1034;
+
+
+
+/* --- Objects --- */
+
+// const person = {
+//     first: `Josh`,
+//     last: `Motta`,
+//     age: 100
+// };
+
+
+
+/* --- Null and Undefined --- */
+
+// let dog;
+// console.log(dog);
+// dog = `Finn`;
+
+// let somethingUndefined;
+// const somethingNull = null;
+
+// const cher = {
+//     first: 'cher'
+// }
+
+// const teller = {
+//     first: 'Raymond',
+//     last: 'Teller',
+// }
+
+// teller.first = 'Teller';
+// teller.last = null;
+
+
+
+/* Booleans */
+
+// let isDrawing = false;
+// let age = 18;
+// const ofAge = age > 19;
+// console.log(ofAge);
+
+// age = 100;
+
 
 
 /* Additional Notes */
@@ -46,3 +92,6 @@ const price = 1034;
 
 // NaN - Not a number is a number
 // Infinity and -Infinity are both numbers
+
+// Triple Equals checks value & type
+// Double Equals checks value
