@@ -21,15 +21,34 @@
 // pizzaList.insertAdjacentText('afterbegin', '🍕 ');
 // pizzaList.insertAdjacentText('beforeend', '🍕');
 
-// Classes!
-const pic = document.querySelector('.nice');
-pic.classList.add('open');
-pic.classList.remove('cool');
+/* --- Classes! --- */
+// const pic = document.querySelector('.nice');
+// pic.classList.add('open');
+// pic.classList.remove('cool');
 
-console.log(pic.classList);
+// console.log(pic.classList);
 
-function toggleRound() {
-  pic.classList.toggle('round');
-}
+// function toggleRound() {
+//   pic.classList.toggle('round');
+// }
 
-pic.addEventListener('click', toggleRound);
+// pic.addEventListener('click', toggleRound);
+
+/* --- Build in and Custom Data Attributes --- */
+// pic.alt = 'Cute Pup'; // setter
+// console.log(pic.alt); // getter
+// console.log(pic.naturalWidth); // getter
+
+// window.addEventListener('load', function () {
+//   console.log(pic.naturalWidth); // getter
+// });
+
+// pic.setAttribute('alt', 'REALLY CUTE PUP');
+// console.log(pic.getAttribute('alt'));
+
+// const custom = document.querySelector('.custom');
+// console.log(custom.dataset);
+
+// custom.addEventListener('click', function () {
+//   alert(`Welcome ${custom.dataset.name} ${custom.dataset.last} `);
+// });
