@@ -9,28 +9,36 @@ document.body.appendChild(div);
 // make an unordered list
 // add three list items with the words "one, two three" in them
 // put that list into the above wrapper
-const list = document.createElement('ul');
+const ul = `<ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>`;
 
-for (let i = 1; i <= 3; i += 1) {
-  const li = document.createElement('li');
+div.innerHTML = ul;
 
-  switch (i) {
-    case 1:
-      li.textContent = 'One';
-      break;
-    case 2:
-      li.textContent = 'Two';
-      break;
-    case 3:
-      li.textContent = 'Three';
-      break;
-    default:
-      break;
-  }
-  list.appendChild(li);
-}
+// const list = document.createElement('ul');
 
-div.appendChild(list);
+// for (let i = 1; i <= 3; i += 1) {
+//   const li = document.createElement('li');
+
+//   switch (i) {
+//     case 1:
+//       li.textContent = 'One';
+//       break;
+//     case 2:
+//       li.textContent = 'Two';
+//       break;
+//     case 3:
+//       li.textContent = 'Three';
+//       break;
+//     default:
+//       break;
+//   }
+//   list.appendChild(li);
+// }
+
+// div.appendChild(list);
 
 // create an image
 // set the source to an image
@@ -76,7 +84,7 @@ function generatePlayerCard(name, age, height) {
   const card = `
         <div class="playerCard">
             <h2>${name} - ${age}</h2>
-            <p>They are ${height} and ${age} years old. In Dog years this person would be ${
+            <p>Their height is ${height} and ${age} years old. In Dog years this person would be ${
     age * 7
   }. That would be a tall dog!</p>
         <button class="delete" type="button">Delete</button>
@@ -86,8 +94,8 @@ function generatePlayerCard(name, age, height) {
 }
 
 // make a new div with a class of cards
-const cardDiv = document.createElement('div');
-cardDiv.classList.add('cards');
+const cards = document.createElement('div');
+cards.classList.add('cards');
 
 // Have that function make 4 cards
 let cardsHTML = generatePlayerCard('Josh', '27', '73');
@@ -97,7 +105,9 @@ cardsHTML += generatePlayerCard('Tammy', '57', '65');
 
 // append those cards to the div
 // put the div into the DOM just before the wrapper element
-div.insertAdjacentHTML('beforebegin', cardsHTML);
+cards.innerHTML = cardsHTML;
+div.insertAdjacentElement('beforebegin', cards);
+
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
