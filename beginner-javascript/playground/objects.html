@@ -8,7 +8,9 @@
 </head>
 <body>
     <input type="text" name="first" value="Josh">
+    <script src="https://unpkg.com/lodash"></script>
     <script>
+        // --- Lesson 1 ---
         const age = 100;
         const person = {
           name: 'Josh',
@@ -31,7 +33,7 @@
 
         person.job = 'Web Developer';
         person.age = 50;
-        console.log(person.age);
+        // console.log(person.age);
         // const propertyToCheck = prompt('What do you want to check?');
         // console.log(propertyToCheck);
         // console.log(person[propertyToCheck]);
@@ -39,11 +41,75 @@
         const nameInput = document.querySelector('[name="first"]');
 
         const name = nameInput ? nameInput.value : '';
-        console.log(name);
+        // console.log(name);
 
-        console.log(delete person.job);
-        person.age = undefined;
-        person.age = null;
+        // console.log(delete person.job);
+        // person.age = undefined;
+        // person.age = null;
+
+        // --- Lesson 2 ---
+        let name1 = 'Josh';
+        let name2 = 'Josh';
+
+        console.log(name1 === name2);
+        name1 = 'Bob';
+        console.log(name1 === name2);
+        name1 = name2;
+        console.log(name1 === name2);
+        name2 = name1;
+        name2 = 'Joshua';
+
+        const person1 = {
+          first: 'Josh',
+          last: 'Motta',
+          clothing: {
+            shirts: 10,
+            pants: 2,
+          },
+        };
+
+        const person2 = {
+          first: 'Josh',
+          last: 'Motta,',
+        };
+
+        // const person3 = person1;
+        // person3.first = 'Bob';
+        // console.log(person3.first);
+        // console.log(person1.first);
+
+        // Spread - Shallow Copy of an object. Only go one level deep
+        // const person3 = { ...person1 };
+        const person3 = _.cloneDeep(person1);
+        person3.clothing.shirts = 100;
+
+        const meatInventory = {
+          bacon: 2,
+          sausage: 3,
+          oyster: 10,
+        };
+
+        const veggieInventory = {
+          lettuce: 5,
+          tomatoes: 3,
+          oyster: 15,
+        };
+
+        // Merge 2 objects together
+        const inventory = { ...meatInventory, ...veggieInventory };
+
+        function doStuff(data) {
+          data = 'something else';
+          console.log(data);
+        }
+
+        function doStuff2(data) {
+          data.tomatoes = 1000000;
+          console.log(data);
+        }
+
+        doStuff(name1);
+        doStuff2(inventory);
     </script>
 </body>
 </html>
