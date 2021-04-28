@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Maps</title>
+ <link rel="stylesheet" href="../base.css">
+</head>
+<body>
+    <ul class="prizes">
+
+    </ul>
+    <script>
+        const person1 = {
+          name: 'Josh',
+          age: 200,
+        };
+
+        const myMap = new Map();
+
+        // .set()
+        myMap.set('name', 'wes');
+        myMap.set(100, 'This is a number');
+        myMap.set(person1, 'Really cool');
+        console.log(myMap);
+
+        const score = 100;
+        const prizes = new Map();
+        prizes.set(100, 'Bear');
+        prizes.set(200, 'Duck');
+        prizes.set(300, 'Car');
+        console.log(`You win a ${prizes.get(score)}`);
+
+        // select that ul
+        const ul = document.querySelector('.prizes');
+        for (const [points, prize] of prizes) {
+          const li = `<li>${points} - ${prize}</li>`;
+          ul.insertAdjacentHTML('beforeend', li);
+        }
+        // . has()
+        console.log(prizes.has(100));
+        // .delete()
+        prizes.delete(200);
+        console.log(prizes);
+        // Additional Notes
+        // Maps order is guaranteed
+        // Maps are for storing data
+        // Object order is not guranteed
+    </script>
+</body>
+</html>
