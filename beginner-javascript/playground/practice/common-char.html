@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Most Commonly Used Character in String</title>
+ <link rel="stylesheet" href="../../base.css">
+</head>
+<body>
+    <script>
+        const testStr = "A string with many letter 'z's': zzzzzzzzzzzz";
+        const countingChars = (str) => {
+          const charCount = {};
+          let maxCharCount = 0;
+          let maxChar = '';
+          for (let i = 0; i < str.length; i++) {
+            charCount[str[i]] = ++charCount[str[i]] || 1;
+          }
+          /* eslint-disable */
+          for (const key in charCount) {
+            if (charCount[key] >= maxCharCount) {
+              maxCharCount = charCount[key];
+              maxChar = key;
+            }
+          }
+          return maxChar;
+        };
+
+        console.log(countingChars(testStr));
+    </script>
+</body>
+</html>
