@@ -1,0 +1,55 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable prettier/prettier */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>Longest String Challenge</title>
+ <link rel="stylesheet" href="../../base.css">
+</head>
+<body>
+ <script>
+  let strArr = [
+  'Josh',
+  'Joanna',
+  'Finn',
+  'Really Long String That Should Win The Longest String',
+  'Short String',
+  'Long String',
+  ];
+  
+  // ES5 Solution
+  function longestString1(arr) {
+    let longestStr = '';
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].length > longestStr.length) {
+        longestStr = arr[i];
+      }
+    }
+    return longestStr;
+  }
+
+  console.log('ES5 Solution: ', longestString1(strArr));
+
+  strArr = [
+  ...strArr,
+    'An even longer string than the last string to differentiate the examples',
+];
+
+  // ES6 Solution
+  const longestString2 = (arr) => {
+    let longestStr = '';
+    arr.forEach((element) => {
+      if (element.length > longestStr.length) {
+        longestStr = element;
+      }
+    });
+    return longestStr;
+  };
+
+  console.log('ES6 Solution: ', longestString2(strArr));
+  </script>
+</body>
+</html>
+
